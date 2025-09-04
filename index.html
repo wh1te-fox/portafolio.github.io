@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Edgard Castillo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1E1E1E;
+            color: #D9D9D9;
+        }
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+        .python-logo {
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+            max-width: 500px;
+            z-index: 0;
+            opacity: 0.3;
+        }
+        @media (max-width: 768px) {
+            .python-logo {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#1E1E1E] text-[#D9D9D9]">
+
+    <!-- Encabezado -->
+    <header class="w-full max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <nav class="flex justify-between items-center">
+            <span class="text-xl font-bold">Portafolio</span>
+            <div class="flex items-center space-x-6">
+                <!-- Enlace a la sección de Inicio -->
+                <a href="#inicio" class="text-[#D9D9D9] hover:text-white transition-colors duration-300">Inicio</a>
+                <!-- Enlace a Telegram -->
+                <a href="https://t.me/Ar_xc001" target="_blank" class="text-[#D9D9D9] hover:text-white transition-colors duration-300">Contactame</a>
+                <!-- Enlace a GitHub -->
+                <a href="https://github.com/wh1te-fox" target="_blank" class="text-[#D9D9D9] hover:text-white transition-colors duration-300">Proyectos</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container" id="inicio">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-16 w-full max-w-7xl relative z-10">
+            
+            <!-- Imagen de Perfil -->
+            <img src="f13082624.jpg" alt="Foto de perfil de Edgard Castillo" class="w-64 h-64 rounded-full flex-shrink-0 object-cover">
+
+            <!-- Texto de Introducción -->
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                <p class="text-xl font-light mb-1">hola soy</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-2">Edgard Castillo</h1>
+                <p class="text-2xl font-light mb-8">desarrollador junior</p>
+                <div class="flex space-x-4">
+                    <!-- Botón para contactar por Telegram -->
+                    <a href="https://t.me/Ar_xc001" target="_blank" class="w-48 h-12 bg-transparent border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-[#1E1E1E] transition-all duration-300">
+                        Contactame
+                    </a>
+                    <!-- Botón para descargar CV 
+                    <a href="#cv Edgard Castillo.pdf" download="Tu_CV.pdf" class="w-48 h-12 bg-transparent border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-[#1E1E1E] transition-all duration-300">
+                        Descargar CV-->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo de Python (Imagen) -->
+        <img src="python-logo.png" alt="Logo de Python" class="python-logo">
+
+
+    </main>
+
+    <!-- Línea Inferior -->
+    <div class="fixed bottom-0 left-0 w-full h-1 bg-[#5EC9B6]"></div>
+
+</body>
+</html>
