@@ -1,160 +1,258 @@
-:root {
-    --dark-gray: #1E1E1E; /* Color de fondo oscuro */
-    --light-gray: #D9D9D9; /* Color de los elementos claros (texto, etc.) */
-    --button-bg: #4A4A4A; /* Color de fondo de los botones */
-    --button-border: #888888; /* Borde de los botones */
-    --blue-python: #306998; /* Color azul del logo de Python */
-    --yellow-python: #FFD43B; /* Color amarillo del logo de Python */
-    --accent-color: #5EC9B6; /* Color de acento para la línea inferior y el "5" */
-}
-
-/* Estilos globales y reseteo */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--dark-gray);
-    color: var(--light-gray);
-    overflow-x: hidden;
+  background: #1e2228;
+  color: #fff;
+  font-family: 'Courier New', monospace;
 }
 
-/* --- Header y Navbar --- */
-.header {
-    width: 100%;
-    padding: 20px 50px;
-}
-
+/* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 80px;
+  align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: #4cffb0;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    align-items: center;
+nav a {
+  color: #ccc;
+  margin-right: 20px;
+  text-decoration: none;
 }
 
-.nav-links li a {
-    color: var(--light-gray);
-    text-decoration: none;
-    transition: color 0.3s;
+nav a.active {
+  color: #4cffb0;
 }
 
-.nav-links li a:hover {
-    color: white;
+.btn-outline {
+  background: transparent;
+  border: 1px solid #4cffb0;
+  color: #4cffb0;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-/* --- Contenido Principal --- */
-.main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px); /* Ajusta a la altura del viewport */
-    padding: 0 50px;
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  align-items: center;
 }
 
-.profile-section {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    position: relative;
-    max-width: 1200px;
-    width: 100%;
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
-.profile-image-container {
-    width: 250px;
-    height: 250px;
-    background-color: var(--light-gray);
-    border-radius: 50%;
-    flex-shrink: 0;
+.hero-text p {
+  max-width: 400px;
+  color: #aaa;
+  margin-bottom: 30px;
 }
 
-.intro-text {
-    flex-grow: 1;
-    display: flex;
+.btn-primary {
+  background: #4cffb0;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ABOUT */
+.about {
+  padding: 80px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.code-text {
+  color: #4cffb0;
+  font-size: 14px;
+}
+
+.about-details {
+  max-width: 500px;
+}
+
+.about-details ul {
+  margin: 20px 0;
+}
+
+.about-details li {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+/* SKILLS */
+.skills {
+  padding: 80px;
+}
+
+.skills h2 {
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #252a31;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.skill-card span {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(76, 255, 176, 0.2);
+}
+
+
+/* --- ESTILOS RESPONSIVOS --- */
+
+/* Se aplican cuando la pantalla tiene 768px de ancho o menos */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
     flex-direction: column;
-    gap: 10px;
-}
+    align-items: flex-start;
+    padding: 20px; /* Padding reducido para más espacio en pantalla */
+  }
 
-.greeting {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--light-gray);
-    margin-bottom: -5px;
-}
-
-.name {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--light-gray);
-}
-
-.role {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--light-gray);
-}
-
-.buttons-container {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.action-button {
-    width: 180px;
-    height: 50px;
-    border: 2px solid var(--light-gray);
-    background-color: transparent;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.action-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* --- Logo de Python (SVG) --- */
-.python-logo {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 500px;
-    height: auto;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-.python-logo path:first-of-type {
-    fill: var(--blue-python);
-}
-
-.python-logo path:last-of-type {
-    fill: var(--yellow-python);
-}
-
-/* Línea de acento inferior */
-body::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  nav {
+    margin-top: 15px;
     width: 100%;
-    height: 5px;
-    background-color: var(--accent-color);
+    display: flex; /* Usamos flex para mejor control del espaciado */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan si no caben */
+  }
+
+  nav a {
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: block;
+    padding: 5px 10px; /* Añadimos padding para hacer el área de clic más grande */
+    font-size: 0.9rem; /* Reducimos ligeramente el tamaño de fuente */
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 60px 20px; /* Más padding vertical, menos horizontal */
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 32px; /* Tamaño de título legible en móviles */
+  }
+
+  .hero-text p {
+    max-width: 100%;
+    font-size: 0.95rem; /* Ajustamos el tamaño del párrafo */
+  }
+
+  .hero-image {
+    margin-top: 40px;
+    order: -1; /* Mueve la imagen arriba del texto en móvil */
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 60px 20px; /* Padding consistente con la sección hero */
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .code-text {
+    /* Estilos para que el bloque de código se vea bien en móvil */
+    background-color: #252a31;
+    padding: 15px;
+    border-radius: 8px;
+    white-space: pre-wrap; /* Hace que el texto largo se ajuste */
+    word-wrap: break-word;
+  }
+
+  .about-details {
+    margin-top: 30px;
+  }
+
+  .about-details ul {
+    padding-left: 20px; /* Mejora la indentación de la lista */
+  }
+  
+  .about-details li {
+    font-size: 0.95rem; /* Hacemos la lista un poco más legible */
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 60px 20px; /* Padding consistente */
+  }
+
+  .skills h2 {
+    font-size: 28px; /* Reducimos el tamaño del subtítulo */
+  }
+
+  .skills-grid {
+    /* Hacemos la cuadrícula más flexible para tarjetas más pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px; /* Reducimos el espacio entre tarjetas */
+  }
+
+  .skill-card {
+    padding: 20px 15px; /* Hacemos las tarjetas más compactas */
+  }
+
+  .skill-card img {
+    width: 50px; /* Reducimos el tamaño de los iconos */
+    height: 50px;
+  }
+
+  .skill-card span {
+    font-size: 12px; /* Ajustamos el tamaño del texto de las habilidades */
+  }
 }
