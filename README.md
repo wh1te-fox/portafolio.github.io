@@ -54,6 +54,8 @@ URL:`https://usuario.github.io`
 *   **Frontend:** HTML5, CSS3.
 *   **Herramientas de desplieque:** GitHub Page.
 
+---
+
 ## Estructura del proyecto
 
 ```
