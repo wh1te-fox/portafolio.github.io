@@ -12,8 +12,8 @@
   <div class="logo">Edgard Castillo</div>
   <nav>
     <a class="active" href="#">Home</a>
-    <a href="https://github.com/wh1te-fox">GitHub</a>
-    <a href="https://x.com/ar_xc001">X/Twiter</a>
+    <a href="https://github.com/wh1te-fox" target="_blank">GitHub</a>
+    <a href="https://x.com/ar_xc001" target="_blank">X/Twitter</a>
     <button onclick="location.href='https://t.me/Ar_xc001'" class="btn-outline">Contact me</button>
   </nav>
 </header>
@@ -21,159 +21,58 @@
 <section class="hero">
   <div class="hero-text">
     <h1>Edgard Castillo<br>Junior Developer</h1>
-    <p>
-      Junior Developer focused on creating solutions with Python.
-    </p>
-    <button onclick="location.href='https://t.me/Ar_xc001'" class="btn-primary">Contact me</button>
+    <p>Junior Developer focused on creating solutions with Python.</p>
+    <div class="hero-actions">
+      <button onclick="location.href='https://t.me/Ar_xc001'" class="btn-primary">Contact me</button>
+      <button onclick="location.href='https://www.linkedin.com/in/edgard-castillo-a97b3633b/'" class="btn-outline">LinkedIn Profile</button>
+    </div>
   </div>
 
   <div class="hero-image">
     <img src="img/IMG_20260114_160942_361.webp" alt="Profile">
   </div>
 </section>
+
 <section class="about">
   <div class="about-container">
-    
     <div class="about-text">
       <h2>About Me</h2>
-      <p>
-I’m a developer with around two years of experience, mainly working with Python for simple projects and scripting. I also have basic knowledge of HTML and CSS, which I use to build simple interfaces.
-      </p>
-      <p>
-
-I consider myself adaptable and eager to learn, and I enjoy solving problems through practical solutions and continuous improvement. I’ve had some experience collaborating in different environments, which has helped me develop communication and teamwork skills.
-      </p>
-      <p>
-I’m motivated by the combination of programming, design, and architecture, and I’m interested in building well-structured solutions. I aim to grow as a software developer while exploring tools like Linux and Figma.
-      </p>
+      <p>I’m a developer with around two years of experience, mainly working with Python for simple projects and scripting. I also have basic knowledge of HTML and CSS, which I use to build simple interfaces.</p>
+      <p>I consider myself adaptable and eager to learn, and I enjoy solving problems through practical solutions and continuous improvement.</p>
+      <p>I’m motivated by the combination of programming, design, and architecture, and I’m interested in building well-structured solutions.</p>
     </div>
 
-    <div class="about-image">
-      <div class="pixel-cat"></div>
-    </div>
-    <style>
-    /* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Sección About */
-.about {
-  padding: 80px 20px;
-}
-
-.about-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-}
-
-/* Texto */
-.about-text {
-  flex: 1;
-}
-
-.about-text h2 {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  color: #aaa;
-}
-
-/* Imagen / ilustración */
-.about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-/* Simulación del gatito pixel */
-.pixel-cat {
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle at center, #a855f7, #6b21a8);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
-}
-
-
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image {
-    margin-top: 30px;
-  }
-}
-
-@media (max-width: 500px) {
-  .about-text h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-text p {
-    font-size: 0.9rem;
-  }
-
-  .pixel-cat {
-    width: 150px;
-    height: 150px;
-  }
-}
-    </style>
-  </div>
-</section>
-</section>
-
-      <button onclick="location.href='https://www.linkedin.com/in/edgard-castillo-a97b3633b/'" class="btn-outline" >LinkedIn profile</button>
+    <div class="about-visual">
+      <div class="about-illustration"></div>
     </div>
   </div>
 </section>
 
 <section class="skills">
   <h2>Technologies I use</h2>
-
   <div class="skills-grid">
     <div class="skill-card">
       <img src="img/tech/python-logo.png" alt="Python">
       <span>Python</span>
     </div>
-
     <div class="skill-card">
       <img src="img/tech/git-log.png" alt="Git">
       <span>Git</span>
     </div>
-
     <div class="skill-card">
       <img src="img/tech/css-logo.png" alt="CSS">
       <span>CSS</span>
     </div>
-
     <div class="skill-card">
       <img src="img/tech/html-logo.png" alt="HTML">
       <span>HTML</span>
     </div>
-
     <div class="skill-card">
       <img src="img/tech/figma-logo.png" alt="Figma">
       <span>Figma</span>
     </div>
   </div>
 </section>
-
 
 </body>
 </html>
