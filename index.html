@@ -31,26 +31,118 @@
     <img src="img/IMG_20260114_160942_361.webp" alt="Profile">
   </div>
 </section>
-
 <section class="about">
-  <h2>About me</h2>
-  <div class="about-content">
-    <pre class="code-text">
-      I am a junior developer focused on creating practical and functional solutions.
-      I have experience in the software development lifecycle, from initial concept to implementation,
-      as well as in interface design and web layout.
-      I work with best practices in version control and have a solid foundation in software architecture.
-    </pre>
+  <div class="about-container">
+    
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+I'm a developer with around two years of experience, primarily focused on Python, for both simple projects and scripting tasks. I also have basic knowledge of HTML and CSS, allowing me to enhance my projects with simple interfaces.
+      </p>
+      <p>
+I'm an adaptable person with a strong desire to learn and share knowledge. I enjoy tackling problems and finding practical solutions, relying on experimentation and continuous improvement. Although my professional experience is limited, I've participated in collaborative environments in various contexts, which has helped me develop communication skills and adapt to teamwork.
 
-    <div class="about-details">
-      <h2>Experience</h2>
-      <ul>
-        <li>Participation in the complete software development lifecycle</li>
-        <li>User interface design</li>
-        <li>Website layout</li>
-        <li>Use of version control with best practices</li>
-        <li>Basic knowledge of software architecture</li>
-      </ul>
+      </p>
+      <p>
+What motivates me most about software development is the combination of programming, design, and architecture. I'm interested not only in writing code but also in understanding how to structure solutions efficiently. In the future, I aim to establish myself as a software developer while continuing to explore other tools and areas that complement my profile, such as Linux and design tools like Figma, always maintaining an open mind and a commitment to continuous learning.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <div class="pixel-cat"></div>
+    </div>
+    <style>
+    /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #ccc;
+}
+
+/* Sección About */
+.about {
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* Texto */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+/* Imagen / ilustración */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Simulación del gatito pixel */
+.pixel-cat {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #a855f7, #6b21a8);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .pixel-cat {
+    width: 150px;
+    height: 150px;
+  }
+}
+    </style>
+  </div>
+</section>
+
       <button onclick="location.href='https://www.linkedin.com/in/edgard-castillo-a97b3633b/'" class="btn-outline" >LinkedIn profile</button>
     </div>
   </div>
