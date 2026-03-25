@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ body {
   background: #1e2228;
   color: #fff;
   font-family: 'Courier New', monospace;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
@@ -20,24 +22,48 @@ body {
 
 .logo {
   color: #4cffb0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 nav a {
   color: #ccc;
-  margin-right: 20px;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-nav a.active {
+nav a:hover, nav a.active {
   color: #4cffb0;
 }
 
+/* BOTONES */
 .btn-outline {
   background: transparent;
   border: 1px solid #4cffb0;
   color: #4cffb0;
   padding: 8px 16px;
   cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: rgba(76, 255, 176, 0.1);
+}
+
+.btn-primary {
+  background: #4cffb0;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 /* HERO */
@@ -51,6 +77,7 @@ nav a.active {
 .hero-text h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hero-text p {
@@ -59,12 +86,9 @@ nav a.active {
   margin-bottom: 30px;
 }
 
-.btn-primary {
-  background: #4cffb0;
-  border: none;
-  padding: 12px 24px;
-  font-weight: bold;
-  cursor: pointer;
+.hero-actions {
+  display: flex;
+  gap: 15px;
 }
 
 .hero-image img {
@@ -72,187 +96,120 @@ nav a.active {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #4cffb0;
 }
 
-/* ABOUT */
+/* ABOUT SECTION */
 .about {
-  padding: 80px;
+  padding: 100px 80px;
+  background: #252a31; /* Un tono ligeramente diferente para separar secciones */
 }
 
-.about-content {
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
+  align-items: center;
+  gap: 60px;
 }
 
-.code-text {
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
   color: #4cffb0;
-  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-.about-details {
-  max-width: 500px;
-}
-
-.about-details ul {
-  margin: 20px 0;
-}
-
-.about-details li {
-  margin-bottom: 10px;
+.about-text p {
   color: #aaa;
+  margin-bottom: 20px;
+}
+
+.about-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-illustration {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, #4cffb0, #2d9a6a);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(76, 255, 176, 0.2);
 }
 
 /* SKILLS */
 .skills {
-  padding: 80px;
+  padding: 100px 80px;
+  text-align: center;
 }
 
 .skills h2 {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  font-size: 2rem;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .skill-card {
   background: #252a31;
   border-radius: 12px;
   padding: 30px 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+  width: 50px;
+  height: 50px;
   margin-bottom: 15px;
 }
 
-.skill-card span {
-  display: block;
-  color: #fff;
-  font-size: 14px;
-}
-
 .skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(76, 255, 176, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-
-/* --- ESTILOS RESPONSIVOS --- */
-
-/* Se aplican cuando la pantalla tiene 768px de ancho o menos */
-@media (max-width: 768px) {
-
-  /* NAVBAR */
-  .navbar {
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .navbar, .hero, .about, .skills {
+    padding: 40px;
+  }
+  
+  .hero, .about-container {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px; /* Padding reducido para más espacio en pantalla */
-  }
-
-  nav {
-    margin-top: 15px;
-    width: 100%;
-    display: flex; /* Usamos flex para mejor control del espaciado */
-    flex-wrap: wrap; /* Permite que los enlaces se envuelvan si no caben */
-  }
-
-  nav a {
-    margin-right: 0;
-    margin-bottom: 10px;
-    display: block;
-    padding: 5px 10px; /* Añadimos padding para hacer el área de clic más grande */
-    font-size: 0.9rem; /* Reducimos ligeramente el tamaño de fuente */
-  }
-
-  /* HERO */
-  .hero {
-    flex-direction: column;
-    padding: 60px 20px; /* Más padding vertical, menos horizontal */
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 32px; /* Tamaño de título legible en móviles */
-  }
-
   .hero-text p {
-    max-width: 100%;
-    font-size: 0.95rem; /* Ajustamos el tamaño del párrafo */
+    margin: 0 auto 30px;
   }
 
-  .hero-image {
-    margin-top: 40px;
-    order: -1; /* Mueve la imagen arriba del texto en móvil */
+  .hero-actions {
+    justify-content: center;
   }
 
-  .hero-image img {
-    width: 200px;
-    height: 200px;
+  .about-visual {
+    order: -1; /* Muestra la imagen arriba en móviles */
   }
+}
 
-  /* ABOUT */
-  .about {
-    padding: 60px 20px; /* Padding consistente con la sección hero */
-  }
-
-  .about-content {
+@media (max-width: 600px) {
+  .navbar {
     flex-direction: column;
-  }
-
-  .code-text {
-    /* Estilos para que el bloque de código se vea bien en móvil */
-    background-color: #252a31;
-    padding: 15px;
-    border-radius: 8px;
-    white-space: pre-wrap; /* Hace que el texto largo se ajuste */
-    word-wrap: break-word;
-  }
-
-  .about-details {
-    margin-top: 30px;
-  }
-
-  .about-details ul {
-    padding-left: 20px; /* Mejora la indentación de la lista */
+    gap: 20px;
   }
   
-  .about-details li {
-    font-size: 0.95rem; /* Hacemos la lista un poco más legible */
-  }
-
-  /* SKILLS */
-  .skills {
-    padding: 60px 20px; /* Padding consistente */
-  }
-
-  .skills h2 {
-    font-size: 28px; /* Reducimos el tamaño del subtítulo */
-  }
-
-  .skills-grid {
-    /* Hacemos la cuadrícula más flexible para tarjetas más pequeñas */
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 15px; /* Reducimos el espacio entre tarjetas */
-  }
-
-  .skill-card {
-    padding: 20px 15px; /* Hacemos las tarjetas más compactas */
-  }
-
-  .skill-card img {
-    width: 50px; /* Reducimos el tamaño de los iconos */
-    height: 50px;
-  }
-
-  .skill-card span {
-    font-size: 12px; /* Ajustamos el tamaño del texto de las habilidades */
+  .hero-text h1 {
+    font-size: 32px;
   }
 }
