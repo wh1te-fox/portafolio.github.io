@@ -156,10 +156,73 @@ nav a.active {
   box-shadow: 0 10px 25px rgba(76, 255, 176, 0.2);
 }
 
+/* FOOTER */
+footer {
+  background: #181b20;
+  border-top: 1px solid rgba(76, 255, 176, 0.08);
+  width: 100%;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 80px;
+}
+
+.footer-col h4 {
+  color: #9ca3af;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #4cffb0;
+  border-radius: 2px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #e5e7eb;
+}
+
+.footer-col ul li a .icon {
+  color: #4cffb0;
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* --- ESTILOS RESPONSIVOS --- */
 
 @media (max-width: 768px) {
-  /* NAVBAR */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -181,7 +244,6 @@ nav a.active {
     font-size: 0.9rem;
   }
 
-  /* HERO */
   .hero {
     flex-direction: column;
     padding: 60px 20px;
@@ -207,7 +269,6 @@ nav a.active {
     height: 200px;
   }
 
-  /* ABOUT */
   .about {
     padding: 60px 20px;
   }
@@ -220,7 +281,6 @@ nav a.active {
     font-size: 0.9rem;
   }
 
-  /* SKILLS */
   .skills {
     padding: 60px 20px;
   }
@@ -245,6 +305,10 @@ nav a.active {
 
   .skill-card span {
     font-size: 12px;
+  }
+
+  .footer-inner {
+    padding: 40px 24px;
   }
 }
 
